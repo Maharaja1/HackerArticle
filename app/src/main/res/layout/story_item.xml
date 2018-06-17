@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_wrap_style">
+
+    <LinearLayout
+        style="@style/match_wrap_style"
+        android:minHeight="@dimen/_65sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_vote"
+            style="@style/match_parent_style"
+            android:layout_margin="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@color/btn_focused_disabled"
+            android:gravity="center"
+            android:text="232"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            style="@style/match_parent_style"
+            android:layout_margin="@dimen/_1sdp"
+            android:layout_weight=".5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/match_wrap_style"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:text="tapsfdknmlkfnmldknflddmfkdmflkdmkdl"
+                android:textColor="@drawable/tab_text_color_selector"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_site"
+                style="@style/match_wrap_style"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="ww.njdnj.dd"
+                android:textColor="@color/btn_focused_disabled"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tv_time_by"
+                style="@style/match_wrap_style"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="tap"
+                android:textSize="@dimen/_9sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_count"
+            style="@style/match_wrap_style"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_1sdp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_comment_24dp"
+            android:gravity="center"
+            android:text="99"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

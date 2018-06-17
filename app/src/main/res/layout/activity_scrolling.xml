@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent_style"
+    android:fitsSystemWindows="true"
+    tools:context=".view.activity.ScrollingActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            style="@style/match_parent_style"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <FrameLayout
+                android:id="@+id/main.framelayout.title"
+                style="@style/match_wrap_style"
+                android:layout_gravity="bottom">
+
+                <LinearLayout
+                    style="@style/match_wrap_style"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        style="@style/match_wrap_style"
+                        android:layout_weight="1"
+                        android:text="tapsfdknmlkfnmldknflddmfkdmflkdmkdl"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_site"
+                        style="@style/match_wrap_style"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="ww.njdnj.dd"
+                        android:textColor="@color/btn_focused_disabled"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_time_by"
+                        style="@style/match_wrap_style"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="tap"
+                        android:textColor="@color/btn_focused_disabled"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+            </FrameLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        style="@style/match_parent_style"
+        android:layout_below="@+id/app_bar" />
+
+
+</RelativeLayout>

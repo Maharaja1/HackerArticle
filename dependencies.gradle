@@ -1,0 +1,104 @@
+ext {
+
+    //Version
+    supportVersion = '27.1.1'
+    constraintVersion = '1.0.2'
+    firebaseVersion = '11.8.0'
+
+    rxJavaVersion = '2.1.5'
+    rxAndroidVersion = '2.0.1'
+
+    butterknifeVersion = '8.8.1'
+
+    daggerVersion = '2.13'
+
+    junitVersion = '4.12'
+    mockitoVersion = '1.10.19'
+    hamcrestVersion = '1.1'
+    robolectricVersion = '3.0'
+
+    gsonVersion = '2.8.0'
+    sdpVersion = '1.0.5'
+
+    retrofitVersion = '2.4.0'
+    okhttpVersion = '3.10.0'
+    gmsVersion = '15.0.1'
+
+    //Packages
+    supportPackage = 'com.android.support'
+    constraintPackage = 'com.android.support.constraint'
+    gmsPackage = 'com.google.android.gms'
+
+    firebasePackage = 'com.google.firebase'
+
+    reactivePackage = 'io.reactivex.rxjava2'
+
+    daggerPackage = 'com.google.dagger'
+    javaxPackage = 'javax.annotation'
+    gsonPackage = 'com.google.code.gson'
+    sdpPackage = 'com.intuit.sdp'
+
+    junitPackage = 'junit'
+    mockitoPackage = 'org.mockito'
+    hamcrestPackage = 'org.hamcrest'
+    robolectricPackage = 'org.robolectric'
+
+    retrofitPackage = 'com.squareup.retrofit2'
+    okhttpPackage = 'com.squareup.okhttp3'
+    butterknifePackage = 'com.jakewharton'
+
+    //Support Libraries dependencies
+    supportDependencies = [
+            design           : buildDependency(supportPackage, 'design', supportVersion),
+            support          : buildDependency(supportPackage, 'support-v4', supportVersion),
+            appCompat        : buildDependency(supportPackage, 'appcompat-v7', supportVersion),
+            cardview         : buildDependency(supportPackage, 'cardview-v7', supportVersion),
+            constraint       : buildDependency(constraintPackage, 'constraint-layout', constraintVersion),
+            supportAnnotation: buildDependency(supportPackage, 'support-annotations', supportVersion)]
+
+    //RX Libraries dependencies
+    rxDependencies = [
+            rxJava   : buildDependency(reactivePackage, 'rxjava', rxJavaVersion),
+            rxAndroid: buildDependency(reactivePackage, 'rxandroid', rxAndroidVersion)]
+
+    //Firebase Libraries dependencies
+    fireDependencies = [
+            firebaseauth   : buildDependency(firebasePackage, 'firebase-auth', firebaseVersion),
+            firebasemessaging   : buildDependency(firebasePackage, 'firebase-messaging', firebaseVersion),
+            firebasecrash: buildDependency(firebasePackage, 'firebase-crash', firebaseVersion)]
+
+    // Retrofit
+    retrofitDependencies = [
+            retrofit      : buildDependency(retrofitPackage, 'retrofit', retrofitVersion),
+            convertergson : buildDependency(retrofitPackage, 'converter-gson', retrofitVersion),
+            adapter_rxjava: buildDependency(retrofitPackage, 'adapter-rxjava2', retrofitVersion),
+            okhttp        : buildDependency(okhttpPackage, 'okhttp', okhttpVersion),
+            urlconnection : buildDependency(okhttpPackage, 'okhttp-urlconnection', okhttpVersion),
+            logging       : buildDependency(okhttpPackage, 'logging-interceptor', okhttpVersion)]
+
+    //Dagger Libraries dependencies
+    daggerDependencies = [
+            dagger        : buildDependency(daggerPackage, 'dagger', daggerVersion),
+            daggerCompiler: buildDependency(daggerPackage, 'dagger-compiler', daggerVersion)]
+
+    //Elemental Libraries dependencies
+    butterknife = buildDependency(butterknifePackage, 'butterknife', butterknifeVersion)
+    butterknifeProcessor = buildDependency(butterknifePackage, 'butterknife-compiler', butterknifeVersion)
+
+    gson = buildDependency(gsonPackage, 'gson', gsonVersion)
+
+    sdp = buildDependency(sdpPackage, 'sdp-android', sdpVersion)
+
+    gms = buildDependency(gmsPackage, 'play-services-auth', firebaseVersion)
+
+    //Testing
+    testingDependencies = [
+            junit      : buildDependency(junitPackage, 'junit', junitVersion),
+            mockito    : buildDependency(mockitoPackage, 'mockito-core', mockitoVersion),
+            robolectric: buildDependency(robolectricPackage, 'robolectric', robolectricVersion),
+            hamcrest   : buildDependency(hamcrestPackage, 'hamcrest-library', hamcrestVersion)]
+}
+
+static String buildDependency(String pack, String dependency, String version) {
+    return "${pack}:${dependency}:${version}"
+}

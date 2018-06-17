@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_parent_style">
+
+    <WebView
+        android:id="@+id/webview"
+        style="@style/match_parent_style" />
+
+    <ProgressBar
+        android:id="@+id/progress_web"
+        style="@style/wrap_content_style"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</RelativeLayout>
